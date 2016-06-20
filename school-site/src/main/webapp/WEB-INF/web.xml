@@ -26,15 +26,14 @@
 	
 	<!-- 然后接着是SpringSecurity必须的filter 优先配置，让SpringSecurity先加载，防止SpringSecurity拦截失效 -->
 	<filter>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	<filter-name>springSecurityFilterChain</filter-name>
+	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 	</filter>
-
+	
 	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/*</url-pattern>
+	<filter-name>springSecurityFilterChain</filter-name>
+	<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
 	<!-- Spring配置 -->
 	<!-- ====================================== -->
 	<listener>
