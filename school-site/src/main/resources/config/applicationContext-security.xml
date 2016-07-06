@@ -5,18 +5,19 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<global-method-security secured-annotations="enabled" />
-
-	<http auto-config="true">
+	<http pattern="/resources/**" security="none"/>
+	<http auto-config="true" >
 		<!-- <intercept-url pattern="/user/test1*" access="ROLE_USER" />
 		<intercept-url pattern="/user/test2*" access="ROLE_ADMIN" /> -->
-		<intercept-url pattern="/user/test3*" access="ROLE_ADMIN" />
 		
 		<form-login login-page="/user/login" default-target-url="/user/test3"
 			authentication-failure-url="/user/login?error=true" />
 		<logout logout-success-url="/user/login" />
 		<!-- <csrf disabled="true"/> -->
 	</http>
+
+	<!-- 开启security角色注解：必须配置在Spring MVC配置文件中 -->
+	<!-- <global-method-security jsr250-annotations="enabled" pre-post-annotations="enabled" secured-annotations="enabled"/> -->
 
 	<authentication-manager>
 		<authentication-provider>
@@ -26,4 +27,5 @@
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>
+	
 </beans:beans>

@@ -10,7 +10,7 @@
 <body>
 	<div class="container-fluid">
 		<div class="alert alert-warning" role="alert">
-			<p>服务器忙</p>
+			<p>您没有权限访问该资源！</p>
 		</div>
 	</div>
 </body>

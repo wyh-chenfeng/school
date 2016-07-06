@@ -10,7 +10,7 @@
 <title>ISO—R中医智能辨证决策支持系统（1.0）</title>
 <%@include file="../common/resource.jsp"%>
 <!-- Custom styles for this template -->
-<link href="${SPM_CONTEXT }/css/signin.css" rel="stylesheet">
+<link href="${SPM_CONTEXT }/resources/css/signin.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
