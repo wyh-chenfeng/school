@@ -49,6 +49,6 @@
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 
-	<!-- 开启security角色注解(必须配置在Spring MVC配置文件中 )-->
+	<!-- 开启security角色注解[@Secured("ROLE_ADMIN")](必须配置在Spring MVC配置文件中 )-->
 	<security:global-method-security jsr250-annotations="enabled" pre-post-annotations="enabled" secured-annotations="enabled"/>
 </beans>
